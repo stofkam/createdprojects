@@ -1,0 +1,24 @@
+# Зависимости (устанавливаются через npm install / npm ci)
+node_modules/
+
+# Переменные окружения и пароли (НИКОГДА не пушьте в Git!)
+!.env
+!.env.*
+!.env.example
+
+# Папки сборки и кэш
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Настройки редакторов и ОС
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

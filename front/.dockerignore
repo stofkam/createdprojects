@@ -1,0 +1,18 @@
+# Зависимости (устанавливаются внутри контейнера заново через npm ci)
+node_modules
+npm-debug.log*
+
+# Секреты и локальные переменные окружения
+.env
+.env.*
+
+# Система контроля версий и IDE
+.git
+.gitignore
+.vscode
+.idea
+
+# Файлы Docker и сборка
+Dockerfile
+.dockerignore
+dist
