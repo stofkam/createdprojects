@@ -20,29 +20,30 @@ app.get('/getuser', async (req: Request, res: Response) => {
       return res.status(200).json(users)
     }
     else {
-      const users = await db.orm.public.User.createAll([
-        {
-          username: 'stoff',
-          email: 'stoff@example.com',
-          password: '123456',
-        },
-        {
-          username: 'user',
-          email: 'user@example.com',
-          password: '123456',
-        },
-        {
-          username: 'admin',
-          email: 'admin@example.com',
-          password: '123456',
-        },
-        {
-          username: 'test',
-          email: 'test@example.com',
-          password: '123456',
-        },
-      ])
-      return res.status(200).json(users)
+      // const users = await db.orm.public.User.createAll([
+      //   {
+      //     username: 'stoff',
+      //     email: 'stoff@example.com',
+      //     password: '123456',
+      //   },
+      //   {
+      //     username: 'user',
+      //     email: 'user@example.com',
+      //     password: '123456',
+      //   },
+      //   {
+      //     username: 'admin',
+      //     email: 'admin@example.com',
+      //     password: '123456',
+      //   },
+      //   {
+      //     username: 'test',
+      //     email: 'test@example.com',
+      //     password: '123456',
+      //   },
+      // ])
+      // return res.status(200).json(users)
+      return res.status(400).json({message: 'No users found'})
     }
   } catch (error) {
     return res.status(500).json({error: 'Internal Server Error'})
